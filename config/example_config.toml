@@ -1,0 +1,4 @@
+# user credentials for Renault API access
+
+login_id = "your@email.com" # --> change to your id
+password = "your_Password"  # --> change to your password
