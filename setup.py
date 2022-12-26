@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='renault-api-lite',
-    version='0.8.0',
+    version='0.8.1',
     packages=['renault'],
     url='https://github.com/bkogler/renault-api-lite',
     license='MIT',

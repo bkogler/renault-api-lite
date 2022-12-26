@@ -279,7 +279,7 @@ class RenaultVehicleClient:
 
         :return:
         """
-        self.__async_loop = asyncio.get_event_loop()
+        self.__async_loop = asyncio.get_event_loop_policy().get_event_loop()
         self.__aiohttp_client_session = aiohttp.ClientSession(
             timeout=ClientTimeout(total=self.__timeout),
             loop=self.__async_loop)
