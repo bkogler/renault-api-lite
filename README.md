@@ -95,4 +95,6 @@ This project is based on [hacf-fr's renault-api](https://github.com/hacf-fr/rena
 # Links
 [renault-api-lite repository](https://github.com/bkogler/renault-api-lite)
 
+[renault-api-lite on PyPi](https://pypi.org/project/renault-api-lite/)
+
 [hacf-fr's renault-api](https://github.com/hacf-fr/renault-api) 
