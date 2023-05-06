@@ -1,4 +1,4 @@
-renault-api==0.1.11
+renault-api==0.1.13
 setuptools==65.6.3
 aiohttp~=3.8.3
 tomli~=2.0.1

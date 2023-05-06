@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='renault-api-lite',
-    version='0.8.1',
+    version='0.8.2',
     packages=['renault'],
     url='https://github.com/bkogler/renault-api-lite',
     license='MIT',
@@ -25,6 +25,6 @@ setup(
     keywords="Renault Z.E. ZOE Twingo Megane Kangoo Electric vehicle EV status API",
     python_requires='>=3.10',
     install_requires=[
-        'renault-api>=0.1.11'
+        'renault-api>=0.1.13'
     ]
 )

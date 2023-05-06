@@ -279,10 +279,11 @@ class RenaultVehicleClient:
 
         :return:
         """
+        # save event loop for further usage with later async calls
         self.__async_loop = asyncio.get_event_loop_policy().get_event_loop()
-        self.__aiohttp_client_session = aiohttp.ClientSession(
-            timeout=ClientTimeout(total=self.__timeout),
-            loop=self.__async_loop)
+
+        # prepare AIOHTTP client session (automatically uses the asyncio event loop of the current thread)
+        self.__aiohttp_client_session = aiohttp.ClientSession(timeout=ClientTimeout(total=self.__timeout))
 
         self.__renault_client = RenaultClient(websession=self.__aiohttp_client_session, locale=self.__account_locale)
 
@@ -448,14 +449,6 @@ class RenaultVehicleClient:
             })
 
         return vehicle_list
-
-    def __del__(self) -> None:
-        """
-        Housekeeping: Close open http client session
-        :return:
-        """
-        if not self.__async_loop.is_closed() and self.__aiohttp_client_session:
-            self.__run_async(self.__aiohttp_client_session.close())
 
     def get_status(self, status_type: StatusType | Tuple[StatusType, ...] = STATUS_MINIMUM) \
             -> OrderedDict[str, Any]:
